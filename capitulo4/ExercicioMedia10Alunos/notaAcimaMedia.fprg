@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 09:52:23 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjQwOjQxICI7Mjk4Mw=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjUyOjIzICI7MTszMDk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, e, f, g, h, i, j, notaAcima" type="Integer" array="False" size=""/>
+            <declare name="mediaTurma" type="Integer" array="False" size=""/>
+            <assign variable="notaAcima" expression="0"/>
+            <output expression="&quot;Digite a nota do Aluno A&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Digite a nota do Aluno B&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Digite a nota do Aluno C&quot;" newline="True"/>
+            <input variable="c"/>
+            <output expression="&quot;Digite a nota do Aluno D&quot;" newline="True"/>
+            <input variable="d"/>
+            <output expression="&quot;Digite a nota do Aluno E&quot;" newline="True"/>
+            <input variable="e"/>
+            <output expression="&quot;Digite a nota do Aluno F&quot;" newline="True"/>
+            <input variable="f"/>
+            <output expression="&quot;Digite a nota do Aluno G&quot;" newline="True"/>
+            <input variable="g"/>
+            <output expression="&quot;Digite a nota do Aluno H&quot;" newline="True"/>
+            <input variable="h"/>
+            <output expression="&quot;Digite a nota do Aluno I&quot;" newline="True"/>
+            <input variable="i"/>
+            <output expression="&quot;Digite a nota do Aluno J&quot;" newline="True"/>
+            <input variable="j"/>
+            <assign variable="mediaTurma" expression="(a+b+c+d+e+f+g+h+i+j) /10"/>
+            <output expression="&quot;M&#233;dia da turma = &quot; &amp; mediaTurma" newline="True"/>
+            <if expression="a &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="b &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="c &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="d &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="e &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="f &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="g &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="h &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="i &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="j &gt; mediaTurma">
+                <then>
+                    <assign variable="notaAcima" expression="notaAcima + 1"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Quantidades de alunos com nota acima da m&#233;dia =  &quot; &amp; notaAcima" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

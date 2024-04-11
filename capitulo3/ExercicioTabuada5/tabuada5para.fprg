@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 09:04:57 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjAzOjMyICI7Mjk4Mg=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjA0OjU3ICI7MTszMDk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="con" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="1"/>
+            <for variable="con" start="1" end="10" direction="inc" step="1">
+                <output expression="con &amp; &quot; X  5 = &quot; &amp; con * 5" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

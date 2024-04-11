@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 09:18:43 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjA1OjM1ICI7Mjk4Nw=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjE4OjQzICI7NTszMTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, con" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="1"/>
+            <output expression="&quot;Digite um numero para gerar a tabuada&quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="con &lt;= 10">
+                <output expression="con &amp; &quot; X &quot; &amp; n &amp; &quot; = &quot; &amp; con * 5" newline="True"/>
+                <assign variable="con" expression="con + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

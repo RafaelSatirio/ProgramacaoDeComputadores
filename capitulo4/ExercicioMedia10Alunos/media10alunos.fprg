@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-11 09:40:11 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjMwOjMwICI7Mjk4MA=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTE7IjA5OjQwOjExICI7MTszMDg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mediaAnual, soma, mediaTurma" type="Real" array="False" size=""/>
+            <declare name="con" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="mediaTurma" expression="0"/>
+            <while expression="con &lt; 10">
+                <output expression="&quot;Digite a media do aluno: &quot; &amp; con + 1" newline="True"/>
+                <input variable="mediaAnual"/>
+                <assign variable="soma" expression="soma + mediaAnual"/>
+                <assign variable="con" expression="con + 1"/>
+            </while>
+            <assign variable="mediaTurma" expression="soma / 10"/>
+            <output expression="&quot;M&#233;dia anual da turma = &quot; &amp; mediaTurma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

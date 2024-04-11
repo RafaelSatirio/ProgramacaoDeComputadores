@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-28 09:23:49 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjA4OjU4OjA4ICI7MzAwMQ=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjA5OjIzOjQ5ICI7MTszMTA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, con, acm" type="Integer" array="False" size=""/>
+            <declare name="mnp" type="Real" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="acm" expression="0"/>
+            <assign variable="N" expression="1"/>
+            <while expression="N &gt; 0 and con &lt; 2">
+                <output expression="&quot;Digite um n&#250;mero par&quot;" newline="True"/>
+                <input variable="N"/>
+                <if expression="(N &gt; 0) and ((N % 2) = 0)">
+                    <then>
+                        <assign variable="acm" expression="acm + N"/>
+                        <assign variable="con" expression="con + 1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;nenhum par foi fornecido!&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <if expression="con &gt; 0">
+                <then>
+                    <assign variable="mnp" expression="acm / con"/>
+                    <output expression="&quot;M&#233;dia dos n&#250;meros pares: &quot; &amp; mnp" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

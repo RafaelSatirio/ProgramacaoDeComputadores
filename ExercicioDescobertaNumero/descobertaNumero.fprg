@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-28 11:02:31 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjEwOjM3OjUzICI7Mjk5MQ=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjExOjAyOjMxICI7MTszMDg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, chute, tent" type="Integer" array="False" size=""/>
+            <assign variable="tent" expression="0"/>
+            <output expression="&quot;Brincadeira: descubra o n&#250;mero&quot;" newline="True"/>
+            <output expression="&quot;Digite um n&#250;mero e seu amigo devera descubrir qual n&#250;mero &#233;&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <output expression="&quot;-------------------------------------&quot;" newline="True"/>
+            <do expression="num != chute">
+                <output expression="&quot;Tente acertar o n&#250;mero que seu amigo digitou&quot;" newline="True"/>
+                <output expression="&quot;Digite um n&#250;mero&quot;" newline="True"/>
+                <input variable="chute"/>
+                <assign variable="tent" expression="tent + 1"/>
+                <if expression="chute &gt; num">
+                    <then>
+                        <output expression="&quot;Chutou alto!!&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="chute &lt; num">
+                    <then>
+                        <output expression="&quot;Chutou baixo!!&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;ACERTOUUUU!!&quot;" newline="True"/>
+            <output expression="&quot;N&#250;mero de tentativa = &quot; &amp; tent" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

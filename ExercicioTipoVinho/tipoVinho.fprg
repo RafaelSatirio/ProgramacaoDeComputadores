@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 10:44:05 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMDMzOzIwMjQtMDQtMDI7IjA4OjQzOjU3ICI7Mjk4OA=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMDMzOzIwMjQtMDQtMDI7IjEwOjQ0OjA1ICI7MTszMDgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TipoVinho, finalizador" type="String" array="False" size=""/>
+            <declare name="conv, ct, cb, cr" type="Integer" array="False" size=""/>
+            <declare name="pt, pb, pr" type="Real" array="False" size=""/>
+            <assign variable="conv" expression="0"/>
+            <assign variable="ct" expression="0"/>
+            <assign variable="cb" expression="0"/>
+            <assign variable="cr" expression="0"/>
+            <do expression="finalizador != &quot;finalizar&quot;">
+                <output expression="&quot;Escolha o tipo de vinho que deseja adicionar ao contador?&quot;" newline="True"/>
+                <output expression="&quot;EX: T = Tinto&quot;" newline="True"/>
+                <output expression="&quot;B = Branco&quot;" newline="True"/>
+                <output expression="&quot;R = Ros&#233;&quot;" newline="True"/>
+                <input variable="TipoVinho"/>
+                <if expression="TipoVinho = &quot;T&quot;">
+                    <then>
+                        <assign variable="ct" expression="ct + 1"/>
+                        <output expression="&quot;Foi adicinado mais um Vinho Tinto ao estoque&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="TipoVinho = &quot;B&quot;">
+                            <then>
+                                <assign variable="cb" expression="cb + 1"/>
+                                <output expression="&quot;Foi adicinado mais um Vinho Branco ao estoque&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="TipoVinho = &quot;R&quot;">
+                                    <then>
+                                        <assign variable="cr" expression="cr + 1"/>
+                                        <output expression="&quot;Foi adicinado mais um Vinho Ros&#233; ao estoque&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="conv" expression="conv + 1"/>
+                <output expression="&quot;Deseja finalizar a contagem?&quot;" newline="True"/>
+                <output expression="&quot;Se sim escreva = 'finalizar'&quot;" newline="True"/>
+                <input variable="finalizador"/>
+            </do>
+            <if expression="conv &gt; 0">
+                <then>
+                    <assign variable="pt" expression="(ct*100)/conv"/>
+                    <assign variable="pb" expression="(cb*100)/conv"/>
+                    <assign variable="pr" expression="(cr*100)/conv"/>
+                    <output expression="&quot;Porcentagem de Tintos = &quot; &amp; pt &amp; &quot;%&quot;" newline="True"/>
+                    <output expression="&quot;Porcentagem de Brancos = &quot; &amp; pb &amp; &quot;%&quot;" newline="True"/>
+                    <output expression="&quot;Porcentagem de Ros&#233;s = &quot; &amp; pr &amp; &quot;%&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nenhum tipo de vinho foi fornecido!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

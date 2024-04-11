@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-28 08:55:58 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjA4OjQyOjUwICI7Mjk5MQ=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDMtMjg7IjA4OjU1OjU4ICI7MTszMTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MA, acm, MAT" type="Real" array="False" size=""/>
+            <declare name="con, aluno" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="acm" expression="0"/>
+            <assign variable="MA" expression="0"/>
+            <assign variable="aluno" expression="1"/>
+            <while expression="MA != -1">
+                <output expression="&quot;Digite a m&#233;dia do aluno: &quot; &amp; aluno" newline="True"/>
+                <input variable="MA"/>
+                <if expression="MA != -1">
+                    <then>
+                        <assign variable="acm" expression="acm + MA"/>
+                        <assign variable="con" expression="con + 1"/>
+                        <assign variable="aluno" expression="aluno + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="con &gt; 0">
+                <then>
+                    <assign variable="MAT" expression="acm / con"/>
+                    <output expression="&quot;M&#233;dia anual da turma: &quot; &amp; MAT" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nenhuma m&#233;dia v&#225;lida fornecida&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

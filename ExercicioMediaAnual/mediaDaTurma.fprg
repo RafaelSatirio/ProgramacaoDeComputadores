@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-26 10:47:10 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMzg7MjAyNC0wMy0yNjsiMTA6Mjk6NTAgIjsyOTQw"/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMzg7MjAyNC0wMy0yNjsiMTA6NDc6MTAgIjsxOzMwNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MA, acm, MAT" type="Real" array="False" size=""/>
+            <declare name="con, aluno" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="acm" expression="0"/>
+            <assign variable="aluno" expression="1"/>
+            <while expression="con &lt; 50">
+                <output expression="&quot;Digite a m&#233;dia do aluno: &quot; &amp; aluno" newline="True"/>
+                <input variable="MA"/>
+                <assign variable="acm" expression="acm + MA"/>
+                <assign variable="con" expression="con + 1"/>
+                <assign variable="aluno" expression="aluno + 1"/>
+            </while>
+            <assign variable="MAT" expression="acm / 50"/>
+            <output expression="&quot;M&#233;dia anual da turma &#233;: &quot; &amp; MAT" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

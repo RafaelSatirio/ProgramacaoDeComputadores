@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-26 10:00:31 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMzg7MjAyNC0wMy0yNjsiMDk6MjY6MDAgIjsyOTQw"/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMzg7MjAyNC0wMy0yNjsiMTA6MDA6MzEgIjsxOzMwMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="preco" type="Real" array="False" size=""/>
+            <declare name="origem" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o pre&#231;o do produto&quot;" newline="True"/>
+            <input variable="preco"/>
+            <output expression="&quot;Digite a que regi&#227;o ele pertence &quot;&amp;&#13;&#10;&quot;EX: 1 = Sul, &quot;&amp;&#13;&#10;&quot;2 = Norte, &quot;&amp;&#13;&#10;&quot;3 = Leste, &quot;&amp;&#13;&#10;&quot;4 = Oeste, &quot;&amp;&#13;&#10;&quot;7, 8, 9 = Sudeste, &quot;&amp;&#13;&#10;&quot;10 at&#233; o 20 = Centro-Oeste, &quot;&amp;&#13;&#10;&quot;5, 6, 25 at&#233; o 30, &quot;&amp;&#13;&#10;&quot;nenhum desses = importado &quot;" newline="True"/>
+            <input variable="origem"/>
+            <if expression="origem = 1">
+                <then>
+                    <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Sul&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="origem = 2">
+                        <then>
+                            <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp;  &quot; Origem: Norte&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="origem = 3">
+                                <then>
+                                    <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Leste&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="origem = 4">
+                                        <then>
+                                            <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Oeste&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="origem = 7 or origem = 8 or origem = 9">
+                                                <then>
+                                                    <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Sudeste&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="origem &gt;= 10 or origem &lt;= 20">
+                                                        <then>
+                                                            <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Centro-Oeste&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="origem = 5 or origem = 6 or origem &gt;= 25 or origem &lt;= 30">
+                                                                <then>
+                                                                    <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Nordeste&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Pre&#231;o: &quot; &amp; preco &amp; &quot; Origem: Importado&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

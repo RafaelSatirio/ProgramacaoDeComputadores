@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-04 09:43:54 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjA5OjMxOjEyICI7Mjk4Mw=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjA5OjQzOjU0ICI7MTszMTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="SI, V, num" type="Integer" array="False" size=""/>
+            <assign variable="SI" expression="0"/>
+            <for variable="V" start="1" end="50" direction="inc" step="1">
+                <output expression="&quot;Digite um n&#250;mero&quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="num % 2 = 1">
+                    <then>
+                        <if expression="num % 3 = 0">
+                            <then>
+                                <assign variable="SI" expression="SI + num"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;N&#227;o serve pra ser divisivel por 3&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;N&#227;o serve pra ser divisivel por 3&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Soma dos n&#250;meros impares = &quot; &amp; SI" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

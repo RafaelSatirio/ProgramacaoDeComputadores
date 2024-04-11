@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-04 09:31:10 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjA5OjE2OjU2ICI7Mjk5NA=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjA5OjMxOjEwICI7MjszMDkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MA, acm, MAT" type="Real" array="False" size=""/>
+            <declare name="V" type="Integer" array="False" size=""/>
+            <assign variable="acm" expression="0"/>
+            <for variable="V" start="1" end="50" direction="inc" step="1">
+                <output expression="&quot;Digite a m&#233;dia anual do aluno = &quot; &amp; V" newline="True"/>
+                <input variable="MA"/>
+                <assign variable="acm" expression="acm + MA"/>
+            </for>
+            <assign variable="MAT" expression="acm / 50"/>
+            <output expression="&quot;M&#233;dia anual da turma = &quot; &amp; MAT" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 09:30:31 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDU5OzIwMjQtMDMtMjE7IjA4OjU5OjUxICI7Mjk5OA=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDU5OzIwMjQtMDMtMjE7IjA5OjMwOjMxICI7MTszMDk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="H, R, C, Qtde, Area, Litro" type="Real" array="False" size=""/>
+            <output expression="&quot;Escreva a altura do clindro&quot;" newline="True"/>
+            <input variable="H"/>
+            <output expression="&quot;Escreva o raio do cilindro&quot;" newline="True"/>
+            <input variable="R"/>
+            <assign variable="Area" expression="(3.14 * R * R) + (2 * 3.14 * R * H)"/>
+            <assign variable="Litro" expression="Area / 3"/>
+            <assign variable="Qtde" expression="Litro / 5"/>
+            <assign variable="C" expression="Qtde * 50"/>
+            <output expression="&quot;Esse &#233; o Custo: R$&quot; &amp; C &amp; &quot; e essa &#233; a Quantidade de latas: &quot; &amp; Qtde" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

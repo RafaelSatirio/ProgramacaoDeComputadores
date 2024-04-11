@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-04 10:40:09 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjEwOjE1OjAwICI7Mjk3NA=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMDQ7IjEwOjQwOjA5ICI7MTszMDg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="min, seg" type="Integer" array="False" size=""/>
+            <output expression="&quot;10:00&quot;" newline="True"/>
+            <for variable="min" start="9" end="0" direction="dec" step="1">
+                <for variable="seg" start="59" end="0" direction="dec" step="1">
+                    <output expression="min &amp; &quot;:&quot; &amp; seg" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

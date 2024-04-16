@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-16 10:26:47 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMDMyOzIwMjQtMDQtMTY7IjEwOjE3OjI2ICI7Mjk4Mg=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMDMyOzIwMjQtMDQtMTY7IjEwOjI2OjQ3ICI7MTszMDkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vetClasse" type="Real" array="True" size="11"/>
+            <declare name="soma, media" type="Real" array="False" size=""/>
+            <declare name="notaAcima, x" type="Integer" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <assign variable="notaAcima" expression="0"/>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;digite a nota do aluno: &quot; &amp; x" newline="True"/>
+                <input variable="vetClasse[x]"/>
+            </for>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <assign variable="soma" expression="soma + vetClasse[x]"/>
+            </for>
+            <assign variable="media" expression="soma / 10"/>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <if expression="vetClasse[x] &gt; media">
+                    <then>
+                        <assign variable="notaAcima" expression="notaAcima + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;N&#250;meros de alunos com a nota acima da m&#233;dia = &quot; &amp;  notaAcima" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

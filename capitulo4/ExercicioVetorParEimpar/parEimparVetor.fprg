@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="autologon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-18 10:50:36 "/>
+        <attribute name="created" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTg7IjEwOjMxOjA4ICI7Mjk4NQ=="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDgxOzIwMjQtMDQtMTg7IjEwOjUwOjM2ICI7MTszMDk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vetLido" type="Integer" array="True" size="11"/>
+            <declare name="vetPar" type="Integer" array="True" size="11"/>
+            <declare name="vetImpar" type="Integer" array="True" size="11"/>
+            <declare name="i, p, x" type="Integer" array="False" size=""/>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;N&#250;mero: &quot; &amp; x" newline="True"/>
+                <input variable="vetLido[x]"/>
+            </for>
+            <assign variable="i" expression="0"/>
+            <assign variable="p" expression="0"/>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <if expression="vetLido[x] % 2 = 0">
+                    <then>
+                        <assign variable="p" expression="p + 1"/>
+                        <assign variable="vetPar[p]" expression="vetLido[x]"/>
+                    </then>
+                    <else>
+                        <assign variable="i" expression="i + 1"/>
+                        <assign variable="vetImpar[i]" expression="vetLido[x]"/>
+                    </else>
+                </if>
+            </for>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;VetLido: &quot; &amp; vetLido[x]" newline="True"/>
+            </for>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;VetPar: &quot; &amp; vetPar[x]" newline="True"/>
+            </for>
+            <for variable="x" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;VetImpar: &quot; &amp; vetImpar[x]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-29 12:01:40 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNC0yOTsiMDk6NTI6MzQgIjsyNjM1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNC0yOTsiMTI6MDE6NDAgIjszOzI3MzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, categoria" type="Integer" array="False" size=""/>
+            <declare name="valor" type="Real" array="False" size=""/>
+            <declare name="descricao, Gastos" type="String" array="False" size=""/>
+            <declare name="con" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
+            <open expression="Gastos" mode="write"/>
+            <output expression="&quot;Digite o dia da despesa&quot;" newline="True"/>
+            <input variable="dia"/>
+            <while expression="dia != 0">
+                <if expression="con = 0">
+                    <then>
+                        <assign variable="con" expression="con + 1"/>
+                        <output expression="&quot;Digite o mes&quot;" newline="True"/>
+                        <input variable="mes"/>
+                        <output expression="&quot;Digite a categoria&quot;" newline="True"/>
+                        <input variable="categoria"/>
+                        <output expression="&quot;Digite o valor&quot;" newline="True"/>
+                        <input variable="valor"/>
+                        <output expression="&quot;Digite a descri&#231;&#227;o&quot;" newline="True"/>
+                        <input variable="Descricao"/>
+                        <write expression="&quot;Dia&quot; &amp; &quot;;&quot; &amp; &quot;Mes&quot; &amp; &quot;;&quot; &amp; &quot;Categoria&quot; &amp; &quot;;&quot;  &amp; &quot;Valor&quot; &amp; &quot;;&quot; &amp; &quot;Descricao&quot;"/>
+                        <write expression="dia &amp; &quot;;&quot;  &amp; mes &amp; &quot;;&quot;  &amp; categoria &amp; &quot;;&quot;  &amp; valor &amp; &quot;;&quot;  &amp; descricao"/>
+                        <output expression="&quot;Digite o dia da despesa(0 para terminar)&quot;" newline="True"/>
+                        <input variable="dia"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Digite o mes&quot;" newline="True"/>
+                        <input variable="mes"/>
+                        <output expression="&quot;Digite a categoria&quot;" newline="True"/>
+                        <input variable="categoria"/>
+                        <output expression="&quot;Digite o valor&quot;" newline="True"/>
+                        <input variable="valor"/>
+                        <output expression="&quot;Digite a descri&#231;&#227;o&quot;" newline="True"/>
+                        <input variable="Descricao"/>
+                        <write expression="dia &amp; &quot;;&quot;  &amp; mes &amp; &quot;;&quot;  &amp; categoria &amp; &quot;;&quot;  &amp; valor &amp; &quot;;&quot;  &amp; descricao"/>
+                        <output expression="&quot;Digite o dia da despesa(0 para terminar)&quot;" newline="True"/>
+                        <input variable="dia"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

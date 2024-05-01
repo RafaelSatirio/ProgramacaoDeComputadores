@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-01 12:06:51 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTA6NDU6NTIgIjsyNjIw"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTE6NTA6MjIgIjsxMDtVc2VyO0RFU0tUT1AtMDY4S0VFQTsyMDI0LTA0LTI5OyIwOTo1MjozNCAiO2FhYWEuZnByZzs2Mzg4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTI6MDY6NTEgIjs0OzI3Mjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, categoria, i" type="Integer" array="False" size=""/>
+            <declare name="valor, totalGeral" type="Real" array="False" size=""/>
+            <declare name="descricao" type="String" array="False" size=""/>
+            <declare name="vetCategorias" type="String" array="True" size="5"/>
+            <declare name="vetTotais" type="Real" array="True" size="6"/>
+            <assign variable="vetCategorias[0]" expression="&quot;Despesas Fixas&quot;"/>
+            <assign variable="vetCategorias[1]" expression="&quot;Transporte&quot;"/>
+            <assign variable="vetCategorias[2]" expression="&quot;Alimenta&#231;&#227;o&quot;"/>
+            <assign variable="vetCategorias[3]" expression="&quot;Lazer&quot;"/>
+            <assign variable="vetCategorias[4]" expression="&quot;Sa&#250;de&quot;"/>
+            <assign variable="vetTotais[0]" expression="0"/>
+            <assign variable="vetTotais[1]" expression="0"/>
+            <assign variable="vetTotais[2]" expression="0"/>
+            <assign variable="vetTotais[3]" expression="0"/>
+            <assign variable="vetTotais[4]" expression="0"/>
+            <assign variable="totalGeral" expression="0"/>
+            <call expression="registrarDados()"/>
+            <declare name="Gastos" type="String" array="False" size=""/>
+            <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
+            <open expression="Gastos" mode="read"/>
+        </body>
+    </function>
+    <function name="registrarDados" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, categoria" type="Integer" array="False" size=""/>
+            <declare name="valor" type="Real" array="False" size=""/>
+            <declare name="descricao, Gastos" type="String" array="False" size=""/>
+            <declare name="con" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="0"/>
+            <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
+            <open expression="Gastos" mode="write"/>
+            <output expression="&quot;Digite o dia da despesa&quot;" newline="True"/>
+            <input variable="dia"/>
+            <while expression="dia != 0">
+                <if expression="con = 0">
+                    <then>
+                        <assign variable="con" expression="con + 1"/>
+                        <output expression="&quot;Digite o mes&quot;" newline="True"/>
+                        <input variable="mes"/>
+                        <output expression="&quot;Digite a categoria&quot;" newline="True"/>
+                        <input variable="categoria"/>
+                        <output expression="&quot;Digite o valor&quot;" newline="True"/>
+                        <input variable="valor"/>
+                        <output expression="&quot;Digite a descri&#231;&#227;o&quot;" newline="True"/>
+                        <input variable="Descricao"/>
+                        <write expression="dia &amp; &quot;;&quot;  &amp; mes &amp; &quot;;&quot;  &amp; categoria &amp; &quot;;&quot;  &amp; valor &amp; &quot;;&quot;  &amp; descricao"/>
+                        <output expression="&quot;Digite o dia da despesa(0 para terminar)&quot;" newline="True"/>
+                        <input variable="dia"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Digite o mes&quot;" newline="True"/>
+                        <input variable="mes"/>
+                        <output expression="&quot;Digite a categoria&quot;" newline="True"/>
+                        <input variable="categoria"/>
+                        <output expression="&quot;Digite o valor&quot;" newline="True"/>
+                        <input variable="valor"/>
+                        <output expression="&quot;Digite a descri&#231;&#227;o&quot;" newline="True"/>
+                        <input variable="Descricao"/>
+                        <write expression="dia &amp; &quot;;&quot;  &amp; mes &amp; &quot;;&quot;  &amp; categoria &amp; &quot;;&quot;  &amp; valor &amp; &quot;;&quot;  &amp; descricao"/>
+                        <output expression="&quot;Digite o dia da despesa(0 para terminar)&quot;" newline="True"/>
+                        <input variable="dia"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

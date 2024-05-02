@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-02 10:39:54 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTA6NDU6NTIgIjsyNjIw"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTE6NTA6MjIgIjsxMDtVc2VyO0RFU0tUT1AtMDY4S0VFQTsyMDI0LTA0LTI5OyIwOTo1MjozNCAiO2FhYWEuZnByZzs2Mzg4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTI6MDY6NTEgIjs0OzI3Mjk="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDcxOzIwMjQtMDUtMDI7IjA5OjI3OjQwICI7MTtVc2VyO0RFU0tUT1AtMDY4S0VFQTsyMDI0LTA0LTI5OyIwOTo1MjozNCAiOzcuMS5mcHJnOzY0NzU="/>
+        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDcxOzIwMjQtMDUtMDI7IjEwOjM5OjU0ICI7MTszMDk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dia, mes, categoria, i" type="Integer" array="False" size=""/>
+            <declare name="valor, totalGeral" type="Real" array="False" size=""/>
+            <declare name="descricao" type="String" array="False" size=""/>
+            <declare name="vetCategorias" type="String" array="True" size="5"/>
+            <declare name="vetTotais" type="Real" array="True" size="6"/>
+            <assign variable="vetCategorias[0]" expression="&quot;Despesas Fixas&quot;"/>
+            <assign variable="vetCategorias[1]" expression="&quot;Transporte&quot;"/>
+            <assign variable="vetCategorias[2]" expression="&quot;Alimenta&#231;&#227;o&quot;"/>
+            <assign variable="vetCategorias[3]" expression="&quot;Lazer&quot;"/>
+            <assign variable="vetCategorias[4]" expression="&quot;Sa&#250;de&quot;"/>
+            <assign variable="vetTotais[0]" expression="0"/>
+            <assign variable="vetTotais[1]" expression="0"/>
+            <assign variable="vetTotais[2]" expression="0"/>
+            <assign variable="vetTotais[3]" expression="0"/>
+            <assign variable="vetTotais[4]" expression="0"/>
+            <assign variable="totalGeral" expression="0"/>
+            <declare name="Gastos, Linha" type="String" array="False" size=""/>
+            <assign variable="Linha" expression="&quot;&quot;"/>
+            <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
+            <open expression="Gastos" mode="read"/>
+            <while expression="!EOF()">
+                <read variable="Linha"/>
+                <output expression="&quot;Linha&quot; &amp; Len(Linha)" newline="True"/>
+                <assign variable="valor" expression="split(linha, &quot;;&quot;)"/>
+                <assign variable="totalGeral" expression="totalGeral + ToInteger(valor[3])"/>
+            </while>
+        </body>
+    </function>
+    <function name="registrarDados" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="aa" type="Real" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>

@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<flowgorithm fileversion="3.0">
+<flowgorithm fileversion="4.0">
     <attributes>
         <attribute name="name" value=""/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-05-02 10:39:54 "/>
+        <attribute name="saved" value="2024-05-03 07:47:30 "/>
         <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTA6NDU6NTIgIjsyNjIw"/>
         <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTE6NTA6MjIgIjsxMDtVc2VyO0RFU0tUT1AtMDY4S0VFQTsyMDI0LTA0LTI5OyIwOTo1MjozNCAiO2FhYWEuZnByZzs2Mzg4"/>
-        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMTsiMTI6MDY6NTEgIjs0OzI3Mjk="/>
         <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDcxOzIwMjQtMDUtMDI7IjA5OjI3OjQwICI7MTtVc2VyO0RFU0tUT1AtMDY4S0VFQTsyMDI0LTA0LTI5OyIwOTo1MjozNCAiOzcuMS5mcHJnOzY0NzU="/>
         <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMTEtMDcxOzIwMjQtMDUtMDI7IjEwOjM5OjU0ICI7MTszMDk1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wMzsiMDc6NDc6MzAgIjs1OzI3Mzg="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -30,23 +30,45 @@
             <assign variable="vetTotais[3]" expression="0"/>
             <assign variable="vetTotais[4]" expression="0"/>
             <assign variable="totalGeral" expression="0"/>
-            <declare name="Gastos, Linha" type="String" array="False" size=""/>
-            <assign variable="Linha" expression="&quot;&quot;"/>
+            <declare name="Gastos" type="String" array="False" size=""/>
+            <declare name="linha" type="String" array="True" size="5"/>
+            <assign variable="valor" expression="0"/>
             <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
             <open expression="Gastos" mode="read"/>
-            <while expression="!EOF()">
-                <read variable="Linha"/>
-                <output expression="&quot;Linha&quot; &amp; Len(Linha)" newline="True"/>
-                <assign variable="valor" expression="split(linha, &quot;;&quot;)"/>
-                <assign variable="totalGeral" expression="totalGeral + ToInteger(valor[3])"/>
+            <while expression="EOF()">
+                <for variable="i" start="0" end="linha &gt; 5" direction="inc" step="1">
+                    <declare name="contador" type="Integer" array="False" size=""/>
+                    <assign variable="contador" expression="0"/>
+                    <assign variable="valor" expression="0"/>
+                    <read variable="linha[i]"/>
+                    <if expression="linha[i] = &quot;;&quot;">
+                        <then>
+                            <assign variable="contador" expression="contador + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="contador = 3">
+                        <then>
+                            <if expression="linha[i] != &quot;;&quot;">
+                                <then>
+                                    <assign variable="valor" expression="valor + linha[i]"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="totalGeral" expression="totalGeral + valor"/>
+                </for>
             </while>
+            <output expression="&quot;TotalGeral: &quot; &amp; valor" newline="True"/>
         </body>
     </function>
-    <function name="registrarDados" type="None" variable="">
+    <function name="aa" type="Real" variable="">
         <parameters/>
         <body/>
     </function>
-    <function name="aa" type="Real" variable="">
+    <function name="registrarDados" type="None" variable="">
         <parameters/>
         <body/>
     </function>

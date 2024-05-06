@@ -1,4 +1,4 @@
-Dia;Mes;Categoria;Valor;Descricao
-2;2;2;2;2
-4;4;4;4;4
-8;8;8;8;8
+dia;mês;valor;categoria;descricao
+1;5;150;Despesas;Fixas
+3;5;80;Alimentação;almoço
+5;5;200;Transporte;combústivel

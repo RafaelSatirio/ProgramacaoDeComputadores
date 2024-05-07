@@ -1,2 +1,0 @@
-item 1: 5 - feijao tropero\n
-item 2: 6 - feijao azul\n

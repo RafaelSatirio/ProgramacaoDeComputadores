@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
-<flowgorithm fileversion="3.0">
+<flowgorithm fileversion="4.0">
     <attributes>
         <attribute name="name" value=""/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-05-07 10:52:47 "/>
+        <attribute name="saved" value="2024-05-06 12:06:56 "/>
         <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wNjsiMTA6NDU6MjUgIjsyNjI1"/>
         <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wNjsiMTI6MDY6NTYgIjs0OzI3Mzk="/>
-        <attribute name="edited" value="YXV0b2xvZ29uO1NQMDUtTEFCMDEtMDMyOzIwMjQtMDUtMDc7IjEwOjUyOjQ3ICI7MTszMDkz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -25,44 +24,41 @@
             <assign variable="totalGeral" expression="0"/>
             <assign variable="Gastos" expression="&quot;Despesas.csv&quot;"/>
             <open expression="Gastos" mode="read"/>
-            <read variable="linha"/>
             <while expression="!EOF()">
                 <read variable="linha"/>
+                <assign variable="parte" expression="linha"/>
                 <if expression="linha != &quot;&quot;">
                     <then>
-                        <for variable="i" start="0" end=" len(linha) - 1" direction="inc" step="1">
+                        <assign variable="parte" expression="&quot;&quot;"/>
+                        <assign variable="i" expression="1"/>
+                        <for variable="i" start="1" end="len(linha) - 1" direction="inc" step="1">
                             <assign variable="caractere" expression="char(linha, i)"/>
-                            <if expression="caractere != &quot;;&quot;">
+                            <if expression="caractere != &quot;;&quot; and caractere != &quot; &quot;">
                                 <then>
-                                    <assign variable="parte" expression="caractere"/>
+                                    <assign variable="parte" expression="linha"/>
                                 </then>
                                 <else>
                                     <if expression="dia = &quot;&quot;">
                                         <then>
                                             <assign variable="dia" expression="parte"/>
-                                            <assign variable="parte" expression="&quot;&quot;"/>
                                         </then>
                                         <else>
                                             <if expression="mes = &quot;&quot;">
                                                 <then>
                                                     <assign variable="mes" expression="parte"/>
-                                                    <assign variable="parte" expression="&quot;&quot;"/>
                                                 </then>
                                                 <else>
                                                     <if expression="valor = &quot;&quot;">
                                                         <then>
                                                             <assign variable="valor" expression="parte"/>
-                                                            <assign variable="parte" expression="&quot;&quot;"/>
                                                         </then>
                                                         <else>
                                                             <if expression="categoria = &quot;&quot;">
                                                                 <then>
                                                                     <assign variable="categoria" expression="parte"/>
-                                                                    <assign variable="parte" expression="&quot;&quot;"/>
                                                                 </then>
                                                                 <else>
                                                                     <assign variable="descricao" expression="parte"/>
-                                                                    <assign variable="parte" expression="&quot;&quot;"/>
                                                                 </else>
                                                             </if>
                                                         </else>
@@ -73,6 +69,7 @@
                                     </if>
                                 </else>
                             </if>
+                            <assign variable="parte" expression="&quot;&quot;"/>
                         </for>
                         <assign variable="valorDespesa" expression="0"/>
                         <output expression="&quot;Data: &quot; &amp; dia &amp; &quot;/&quot; &amp; mes &amp; &quot; Categoria: &quot; &amp; categoria &amp; &quot; Descri&#231;&#227;o: &quot; &amp; descricao &amp; &quot; Valor: R$&quot; &amp; valor" newline="True"/>
@@ -81,7 +78,7 @@
                     <else/>
                 </if>
             </while>
-            <close/>
+            <close mode="read"/>
         </body>
     </function>
 </flowgorithm>

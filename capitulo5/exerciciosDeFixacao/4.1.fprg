@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-08 09:58:39 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDk6NDc6NDIgIjsyNjM2"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDk6NTg6MzkgIjsxOzI3NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="String" array="False" size=""/>
+            <declare name="qtde, qtdee" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero inteiro&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="qtde" expression="len(num)"/>
+            <output expression="&quot;Essa &#233; a quantidade de d&#237;gitos do n&#250;mero que digitou: &quot; &amp; qtde" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

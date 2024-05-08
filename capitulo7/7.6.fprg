@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-08 12:24:53 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMTA6NDA6MTAgIjsyNjE2"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMTI6MjQ6NTMgIjsyOzI3MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arquivo, contatosJSON, caractere" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="arquivo" expression="&quot;output.json&quot;"/>
+            <open expression="arquivo" mode="read"/>
+            <declare name="linha" type="String" array="False" size=""/>
+            <while expression="!EOF()">
+                <declare name="linhaSemChaves" type="String" array="False" size=""/>
+                <declare name="tam, con" type="Integer" array="False" size=""/>
+                <read variable="contatosJSON"/>
+                <assign variable="tam" expression="len(contatosJSON)"/>
+                <assign variable="con" expression="1"/>
+                <assign variable="linhaSemChaves" expression="&quot;&quot;"/>
+                <for variable="i" start="0" end="tam - 1" direction="inc" step="1">
+                    <assign variable="caractere" expression="char(contatosJSON, i)"/>
+                    <if expression="caractere != &quot;{&quot; and caractere != &quot;}&quot;">
+                        <then>
+                            <if expression="caractere != &quot;1&quot; and caractere != &quot;2&quot; and caractere != &quot;3&quot;">
+                                <then>
+                                    <if expression="caractere != &quot;:&quot;">
+                                        <then>
+                                            <if expression="caractere != &quot;,&quot;">
+                                                <then>
+                                                    <if expression="caractere != &quot;&quot;">
+                                                        <then>
+                                                            <assign variable="linhaSemChaves" expression="linhaSemChaves &amp; caractere"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="linhaSemChaves" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

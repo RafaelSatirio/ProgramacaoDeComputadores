@@ -1,0 +1,17 @@
+{
+  "1": {
+    "nome": "João",
+    "email": "joao@example.com",
+    "filhos": ["Maria", "José"]
+  },
+  "2": {
+    "nome": "Maria",
+    "email": "maria@example.com",
+    "filhos": null
+  },
+  "3": {
+    "nome": "José",
+    "email": "jose@example.com",
+    "filhos": ["Ana"]
+  }
+}

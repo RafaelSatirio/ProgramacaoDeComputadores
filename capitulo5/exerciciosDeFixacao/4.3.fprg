@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-08 10:25:37 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMTA6MTE6MDUgIjsyNjE4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMTA6MjU6MzcgIjsxOzI3MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="conta, inverso, soma, digito, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o n&#250;mero da sua conta corrente(5 Dig&#237;tos): &quot;" newline="True"/>
+            <input variable="conta"/>
+            <assign variable="inverso" expression="0"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <assign variable="inverso" expression="(inverso * 10) + conta % 10"/>
+                <assign variable="conta" expression="conta / 10"/>
+            </for>
+            <assign variable="soma" expression="conta + inverso"/>
+            <assign variable="digito" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <assign variable="digito" expression="digito + ((soma % 10) * i)"/>
+                <assign variable="soma" expression="soma / 10"/>
+                <assign variable="i" expression="i + 1"/>
+            </for>
+            <assign variable="digito" expression="digito % 10"/>
+            <if expression="digito = 0">
+                <then>
+                    <output expression="&quot;O dig&#237;to verificador da conta corrente &#233;: 0&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O dig&#237;to verificador da conta corrente &#233;: &quot; &amp; digito" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

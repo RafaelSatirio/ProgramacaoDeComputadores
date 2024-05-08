@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-08 07:00:48 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDY6NTM6MzggIjsyNjM1"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDc6MDA6NDggIjsxOzI3Mzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <call expression="moduloDois()"/>
+            <assign variable="a" expression="1"/>
+            <assign variable="b" expression="2"/>
+            <assign variable="c" expression="3"/>
+        </body>
+    </function>
+    <function name="moduloDois" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c, d, e" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="5"/>
+            <assign variable="d" expression="6"/>
+            <assign variable="e" expression="7"/>
+        </body>
+    </function>
+    <function name="moduloTres" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="d, e" type="Integer" array="False" size=""/>
+            <assign variable="d" expression="7"/>
+            <assign variable="e" expression="8"/>
+        </body>
+    </function>
+    <function name="moduloUm" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, d" type="Integer" array="False" size=""/>
+            <call expression="moduloDois()"/>
+            <assign variable="d" expression="5"/>
+            <assign variable="a" expression="2"/>
+            <assign variable="b" expression="3"/>
+        </body>
+    </function>
+</flowgorithm>

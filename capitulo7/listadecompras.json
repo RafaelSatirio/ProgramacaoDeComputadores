@@ -1,1 +1,1 @@
-[{"item": "arroz", "quantidade": 5}, {"item": "feijao", "quantidade": 5}, {"item": "pacoca", "quantidade": 5}]
+[{"item": "arroz", "quantidade": 5, "unidade": "pacotes"}, {"item": "feijao", "quantidade": 5, "unidade": "pacotes"}]

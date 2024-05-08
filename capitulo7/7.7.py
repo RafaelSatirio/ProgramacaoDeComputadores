@@ -13,7 +13,9 @@ item = input()
 while item != "fim":
     print("Qual a quantidade do item?")
     qtde = int(input())
-    lista_compras.append({"item": item, "quantidade": qtde})
+    print("Qual a unidade do item?")
+    unidade = input()
+    lista_compras.append({"item": item, "quantidade": qtde, "unidade": unidade})
     con += 1
     print("Qual o " + str(con) + "° item deseja incluir? (escreva 'fim' se quiser terminar)")
     item = input()

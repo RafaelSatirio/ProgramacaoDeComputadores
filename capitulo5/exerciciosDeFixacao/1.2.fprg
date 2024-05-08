@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-08 07:05:29 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDc6MDA6NTEgIjsyNjIz"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0wODsiMDc6MDU6MjkgIjsxOzI3NDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <call expression="moduloUm()"/>
+            <call expression="moduloDois()"/>
+            <assign variable="a" expression="5"/>
+            <assign variable="b" expression="a + 5"/>
+            <assign variable="c" expression="b - 3"/>
+        </body>
+    </function>
+    <function name="moduloDois" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, d, e" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="8 * 5"/>
+            <assign variable="d" expression="40 + 2"/>
+            <assign variable="e" expression="16 - 1"/>
+            <call expression="moduloTres()"/>
+        </body>
+    </function>
+    <function name="moduloTres" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="b, d, c, e" type="Integer" array="False" size=""/>
+            <call expression="moduloUm()"/>
+            <assign variable="e" expression="16 - 1"/>
+            <assign variable="c" expression="9 - 1"/>
+            <assign variable="b" expression="c * 2"/>
+            <assign variable="d" expression="e + 1"/>
+        </body>
+    </function>
+    <function name="moduloUm" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="5 + 4"/>
+            <assign variable="c" expression="9 - 1"/>
+        </body>
+    </function>
+</flowgorithm>

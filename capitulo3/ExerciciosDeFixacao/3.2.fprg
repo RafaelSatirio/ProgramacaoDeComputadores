@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-10 07:38:19 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMDsiMDY6MDY6MDMgIjsyNjE4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMDsiMDc6Mzg6MTkgIjsxOzI3Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, numInteiro" type="Integer" array="False" size=""/>
+            <declare name="raizQ, raizQ2, num2, num3, num4, diferenca, diferenca2, comparar, comparar2" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero, para saber a raiz quadrada dele&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="raizQ" expression="sqrt(num)"/>
+            <assign variable="raizQ2" expression="sqrt(num)"/>
+            <output expression="&quot;A raiz quadrada desse n&#250;mero &#233;: &quot; &amp; raizQ" newline="True"/>
+            <assign variable="num2" expression="Int(raizQ)"/>
+            <assign variable="num3" expression="num2 + 1"/>
+            <output expression="&quot;num2: &quot; &amp; num2" newline="True"/>
+            <output expression="&quot;num3: &quot; &amp; num3" newline="True"/>
+            <assign variable="diferenca" expression="raizQ + num2"/>
+            <assign variable="diferenca2" expression="raizQ + num3"/>
+            <assign variable="diferenca" expression="diferenca - raizQ"/>
+            <assign variable="diferenca2" expression="Int(diferenca2) - raizQ"/>
+            <output expression="&quot;Diferen&#231;a 1: &quot; &amp; diferenca" newline="True"/>
+            <output expression="&quot;Diferen&#231;a 2: &quot; &amp; diferenca2" newline="True"/>
+            <assign variable="comparar" expression="diferenca - raizQ"/>
+            <assign variable="comparar2" expression="diferenca2 - raizQ"/>
+            <if expression="comparar &lt; comparar2">
+                <then>
+                    <assign variable="numInteiro" expression="Int(diferenca)"/>
+                    <output expression="&quot;O n&#250;mero inteiro mais pr&#243;ximo da Raiz Quadrada de 5 &#233;: &quot; &amp; numInteiro" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="numInteiro" expression="Int(diferenca2)"/>
+                    <output expression="&quot;O n&#250;mero inteiro mais pr&#243;ximo da Raiz Quadrada de 5 &#233;: &quot; &amp; numInteiro" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

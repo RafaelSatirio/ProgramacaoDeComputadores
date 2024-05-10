@@ -1,6 +1,6 @@
 ﻿con = 0
 gastos = "Despesas.csv"
-outfile = open(Gastos, 'w')
+outfile = open(gastos, 'w')
 print("Digite o dia da despesa")
 dia = int(input())
 while dia != 0:

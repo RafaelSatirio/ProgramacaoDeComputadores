@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-11 01:10:14 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMTsiMTI6NTE6NDEgIjsyNjE4"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMTsiMDE6MTA6MTQgIjsxOzI3MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="h" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero para descobrir o h&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="h" expression="0"/>
+            <for variable="i" start="1" end="n " direction="inc" step="1">
+                <assign variable="h" expression="h + 1/i"/>
+            </for>
+            <output expression="&quot;O H &#233;: &quot; &amp; h" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

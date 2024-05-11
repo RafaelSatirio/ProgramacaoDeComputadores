@@ -1,26 +1,19 @@
-﻿from math import sqrt
+﻿import math
 
-print("Digite um número para calcular sua raiz quadrada:")
-num = int(input())
-raizQ = sqrt(num)
+numero = float(input("Digite um número: "))
 
-print("A raiz quadrada desse número é:", raizQ)
+raiz = math.sqrt(numero)
+raiz_int = int(raiz)
+raiz_int_mais_um = raiz_int + 1
 
-num2 = int(raizQ)
-num3 = raizQ + 1
+dif1 = raiz_int_mais_um - raiz
+dif2 = raiz - raiz_int
 
-print("num2:", num2)
-print("num3:", num3)
-
-diferenca = raizQ - num2
-diferenca2 = num3 - raizQ
-
-print("Diferença 1:", diferenca)
-print("Diferença 2:", diferenca2)
-
-if diferenca < diferenca2:
-    numInteiro = int(raizQ)
-    print("O número inteiro mais próximo da raiz quadrada de", num, "é:", numInteiro)
+if dif1 < dif2:
+    inteiro_mais_proximo = raiz_int_mais_um
 else:
-    numInteiro = int(num3)
-    print("O número inteiro mais próximo da raiz quadrada de", num, "é:", numInteiro)
+    inteiro_mais_proximo = raiz_int
+
+
+print(f"Raiz quadrada: {raiz}")
+print(f"O número inteiro mais próximo da raiz quadrada de {numero} é: {inteiro_mais_proximo}")

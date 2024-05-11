@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-11 12:50:41 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMTsiMTI6MzM6NTEgIjsyNjE5"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMTsiMTI6NTA6NDEgIjsxOzI3MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero para descobrir se ele &#233; primo ou n&#227;o&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num &lt;= 1">
+                <then>
+                    <output expression="&quot;O n&#250;mero que digitou n&#227;o &#233; primo!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num &lt;= 3">
+                        <then>
+                            <output expression="&quot;O n&#250;mero que digitou &#233; primo!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="num % 2 == 0 or num % 3 == 0">
+                                <then>
+                                    <output expression="&quot;O n&#250;mero que digitou n&#227;o &#233; primo!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;O n&#250;mero que digitou &#233; primo!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

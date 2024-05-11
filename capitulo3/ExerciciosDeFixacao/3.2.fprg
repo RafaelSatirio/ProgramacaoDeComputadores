@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-05-10 07:38:19 "/>
+        <attribute name="saved" value="2024-05-11 12:30:06 "/>
         <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMDsiMDY6MDY6MDMgIjsyNjE4"/>
-        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMDsiMDc6Mzg6MTkgIjsxOzI3Mzk="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMTsiMTI6MzA6MDYgIjsyOzI3MjU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -22,22 +22,18 @@
             <assign variable="num3" expression="num2 + 1"/>
             <output expression="&quot;num2: &quot; &amp; num2" newline="True"/>
             <output expression="&quot;num3: &quot; &amp; num3" newline="True"/>
-            <assign variable="diferenca" expression="raizQ + num2"/>
-            <assign variable="diferenca2" expression="raizQ + num3"/>
-            <assign variable="diferenca" expression="diferenca - raizQ"/>
-            <assign variable="diferenca2" expression="Int(diferenca2) - raizQ"/>
+            <assign variable="diferenca" expression="raizQ - num2"/>
+            <assign variable="diferenca2" expression="num3 - raizQ"/>
             <output expression="&quot;Diferen&#231;a 1: &quot; &amp; diferenca" newline="True"/>
             <output expression="&quot;Diferen&#231;a 2: &quot; &amp; diferenca2" newline="True"/>
-            <assign variable="comparar" expression="diferenca - raizQ"/>
-            <assign variable="comparar2" expression="diferenca2 - raizQ"/>
-            <if expression="comparar &lt; comparar2">
+            <if expression="diferenca2 &lt; diferenca">
                 <then>
-                    <assign variable="numInteiro" expression="Int(diferenca)"/>
+                    <assign variable="numInteiro" expression="Int(num3)"/>
                     <output expression="&quot;O n&#250;mero inteiro mais pr&#243;ximo da Raiz Quadrada de 5 &#233;: &quot; &amp; numInteiro" newline="True"/>
                 </then>
                 <else>
-                    <assign variable="numInteiro" expression="Int(diferenca2)"/>
-                    <output expression="&quot;O n&#250;mero inteiro mais pr&#243;ximo da Raiz Quadrada de 5 &#233;: &quot; &amp; numInteiro" newline="True"/>
+                    <assign variable="numInteiro" expression="Int(num2)"/>
+                    <output expression="&quot;O n&#250;mero inteiro mais pr&#243;ximo da Raiz Quadrada de &quot; &amp; num &amp; &quot; &#233;: &quot; &amp; numInteiro" newline="True"/>
                 </else>
             </if>
         </body>

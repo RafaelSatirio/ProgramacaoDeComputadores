@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-12 04:40:28 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDQ6MzM6MjUgIjsyNjIy"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDQ6NDA6MjggIjsxOzI3MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fatorial, n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero para calcular o seu fatorial&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n == 0">
+                <then>
+                    <output expression="&quot;O fatorial de: &quot; &amp; n &amp; &quot; &#233;: 1&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="fatorial" expression="1"/>
+                    <for variable="i" start="1" end="n " direction="inc" step="1">
+                        <assign variable="fatorial" expression="fatorial * i"/>
+                    </for>
+                    <output expression="&quot;O fatorial do n&#250;mero: &quot; &amp; n &amp; &quot; &#233;: &quot; &amp; fatorial" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

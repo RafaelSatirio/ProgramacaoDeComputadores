@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-12 05:00:56 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDQ6NTQ6MDkgIjsyNjI3"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDU6MDA6NTYgIjsxOzI3Mjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="conjunto" type="Integer" array="True" size="20"/>
+            <declare name="i, con, menor, maior" type="Integer" array="False" size=""/>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="&quot;Digite o &quot; &amp; con &amp; &quot;&#176; n&#250;mero do conjunto de 20&quot;" newline="True"/>
+                <input variable="conjunto[i]"/>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <if expression="con = 1">
+                    <then>
+                        <assign variable="menor" expression="conjunto[i]"/>
+                    </then>
+                    <else>
+                        <if expression="conjunto[i] &lt; menor">
+                            <then>
+                                <assign variable="menor" expression="conjunto[i]"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <if expression="con = 1">
+                    <then>
+                        <assign variable="maior" expression="conjunto[i]"/>
+                    </then>
+                    <else>
+                        <if expression="conjunto[i] &gt; maior">
+                            <then>
+                                <assign variable="maior" expression="conjunto[i]"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+            <output expression="&quot;O menor n&#250;mero do conjunto &#233;: &quot; &amp; menor" newline="True"/>
+            <output expression="&quot;O maior n&#250;mero do conjunto &#233;: &quot; &amp; maior" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

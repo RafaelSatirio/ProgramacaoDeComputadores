@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-12 04:51:44 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDQ6NDI6MTEgIjsyNjE3"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDQ6NTE6NDQgIjsxOzI3MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fib" type="Integer" array="True" size="20"/>
+            <declare name="i, con" type="Integer" array="False" size=""/>
+            <assign variable="fib[0]" expression="0"/>
+            <assign variable="fib[1]" expression="1"/>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="2" end="19" direction="inc" step="1">
+                <assign variable="fib[i]" expression="fib[i-1] + fib[i-2]"/>
+            </for>
+            <for variable="i" start="0" end="19" direction="inc" step="1">
+                <output expression="&quot;O &quot;&amp; con &amp; &quot; termo: &quot; &amp; fib[i]" newline="True"/>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

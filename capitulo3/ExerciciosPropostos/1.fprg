@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-12 05:32:08 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDU6MDQ6MTkgIjsyNjI0"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTA2OEtFRUE7MjAyNC0wNS0xMjsiMDU6MzI6MDggIjsxOzI3MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, con, mediaPonderadaResultado" type="Integer" array="False" size=""/>
+            <declare name="mediaPonderada" type="Integer" array="True" size="5"/>
+            <declare name="pesos" type="Integer" array="True" size="5"/>
+            <declare name="numero" type="Integer" array="True" size="5"/>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Digite o &quot; &amp; con &amp; &quot;&#176; de 5&quot;" newline="True"/>
+                <input variable="numero[i]"/>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+            <assign variable="con" expression="1"/>
+            <assign variable="pesos[0]" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="pesos[i]" expression="con"/>
+                <assign variable="con" expression="con + 1"/>
+            </for>
+            <assign variable="con" expression="1"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="mediaPonderada[i]" expression="numero[i] * pesos[i]"/>
+            </for>
+            <assign variable="mediaPonderadaResultado" expression="0"/>
+            <assign variable="mediaPonderadaResultado" expression="mediaPonderada[0] + mediaPonderada[1] + mediaPonderada[2] + mediaPonderada[3] + mediaPonderada[4]"/>
+            <assign variable="mediaPonderadaResultado" expression="mediaPonderadaResultado / (pesos[0] + pesos[1] + pesos[2] + pesos[3] + pesos[4])"/>
+            <output expression="&quot;A m&#233;dia ponderada &#233;: &quot; &amp; mediaPonderadaResultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
